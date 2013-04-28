@@ -1,0 +1,1 @@
+./env/bin/python weddingsnap/manage.py runserver

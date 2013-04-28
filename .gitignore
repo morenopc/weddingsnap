@@ -1,4 +1,9 @@
+env
+*.pyc
+*.*~
+*.bkup.py
+*.db
 *.log
 *.pot
-*.pyc
 local_settings.py
+weddingsnap/media/albums

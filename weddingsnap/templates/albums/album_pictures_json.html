@@ -1,0 +1,13 @@
+{
+  "album": "{{ album.id }}",
+  "pictures":[
+    {% for picture in pictures %}
+    {
+      "id": "{{ picture.id }}",
+      "name": {{ picture.name }},
+      "path": "{{ picture.path }}",
+      "thumbnail": "{{ picture.thumbnail }}"
+    }{% if not forloop.last %},{% endif %}
+    {% endfor %}
+  ]
+}

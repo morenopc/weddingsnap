@@ -1,0 +1,48 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}MasterVig{% endblock %}</title>
+    {% block head %}
+      <!-- jQuery -->
+      <script src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' type="text/javascript"></script>
+      <!-- Twitter Bootstrap -->
+      <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+      <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    {% endblock %}
+    {% block extra_head %}{% endblock extra_head %}
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar navbar-static-top">
+      <div class="navbar-inner">
+        <a class="brand" href="/">{% block brand %}Weddingnap{% endblock %}</a>
+        <ul class="nav">
+          {% block navbuttons %}
+            <li class="divider-vertical"></li>
+            <li class="active"><a href="/">Home</a></li>
+          {% endblock %}
+        </ul>
+        <ul class="nav pull-right">
+          {% block navbuttons_right %}
+            <li class="divider-vertical"></li>
+            <li class="about"><a href="#imprimir">About</a></li>
+          {% endblock %}
+        </ul>
+      </div>
+    </div>
+    <!-- subhead -->
+    <div style="margin-left: 20px;">
+      {% block subhead %}
+      <div class="page-header">
+        <h1>Weddingnap project <small>home</small></h1>
+      </div>
+      {% endblock %}
+    </div>
+    <!-- Content -->
+    {% block content %}{% endblock %}
+    <!-- Extra JS -->
+    {% block extra_js %}{% endblock %}
+  </body>
+</html>

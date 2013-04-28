@@ -1,0 +1,9 @@
+# Default
+Django == 1.4.3
+South == 0.7.6
+Unipath == 0.2.1
+django_extensions == 1.1.1
+# Project
+PIL == 1.1.7
+django-imagekit == 2.0.4
+facepy == 0.8.4

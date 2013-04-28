@@ -1,0 +1,10 @@
+[
+  {% for album in albums %}
+  {
+    "id": "{{ album.id }}",
+    "create_at": "{{ album.create_at }}",
+    "name": {{ album.name }},
+    "cover": "{{ album.cover }}"
+  }{% if not forloop.last %},{% endif %}
+  {% endfor %}
+]

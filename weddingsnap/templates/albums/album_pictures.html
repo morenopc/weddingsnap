@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}{{ album.name }}{% endblock %}
+
+{% block navbuttons %}
+  <li class="divider-vertical"></li>
+  <li><a href="/">Back</a></li>
+  <li class="active"><a href="">Pictures</a></li>
+{% endblock %}
+
+{% block subhead %}
+  <div class="page-header">
+    <h1>{{ album.name }}</h1>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        {% for picture in pictures %}
+        <div class="span2" title="{{ picture.name }}">
+          <a href="{{ picture.path.url }}">
+            <img src="{{ picture.thumbnail.url }}" class="img-polaroid">
+          </a>
+          <p class="text-center">{{ picture.name }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

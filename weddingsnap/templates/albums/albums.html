@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Albums{% endblock %}
+
+{% block subhead %}
+  <div class="page-header">
+    <h1>Albums</h1>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        {% for album in albums %}
+        <div class="span2" title="{{ album.name }}">
+          <a href="/album/{{ album.id }}/pictures">
+            <img src="{{ album.cover.url }}" class="img-rounded">
+          </a>
+          <p class="text-center">{{ album.name }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
