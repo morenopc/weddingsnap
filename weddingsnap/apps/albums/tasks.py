@@ -56,7 +56,7 @@ def fetch_pictures():
         pictures_album = albums[0]
         pictures = pictures_album.pictures()
         count_pics = pictures.count()
-        
+
         if count_pics == full_album:
             # Create new album
             pictures_album = models.Album(name=album['data'][0].get('name'))
@@ -85,8 +85,8 @@ def fetch_pictures():
         pictures = pictures_album.pictures()
         # Set album cover
         if pictures_album.cover.name == 'img/no-cover-picture.png' and pictures:
-           pictures_album.cover = pictures[0].thumbnail
-           pictures_album.save()
+            pictures_album.cover = pictures[0].thumbnail
+            pictures_album.save()
 
     elif album['data']:
         # No albums
@@ -108,5 +108,5 @@ def fetch_pictures():
         pictures = pictures_album.pictures()
         # Set album cover
         if pictures:
-           pictures_album.cover = pictures[0].thumbnail
-           pictures_album.save()
+            pictures_album.cover = pictures[0].thumbnail
+            pictures_album.save()

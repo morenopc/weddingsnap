@@ -16,6 +16,7 @@ def show_all_albums(request):
     return render_to_response('albums/albums.html',
         context_instance=RequestContext(request, context))
 
+
 # @login_required
 def all_albums_json(request):
     """ Return all albums stored """
