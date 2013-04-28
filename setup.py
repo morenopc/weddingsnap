@@ -11,7 +11,6 @@ setup(
     version = '0.1',
     packages=[
         'weddingsnap',
-        'weddingsnap.apps',
         'weddingsnap.apps.albums',
         'weddingsnap.apps.albums.migrations'],
       classifiers=[
